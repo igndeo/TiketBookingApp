@@ -335,122 +335,121 @@ def beli_tiket():
             print("Kode tidak tersedia, Masukkan kode yang benar ! ")  
 
 ######################## MAIN FUNCTION ########################
-while True:
-    try:
-        while True:
-            ######################## INPUT UNTUK MASUK MENU UTAMA ########################
-            user_in()
-            masuk = int(input('Masuk sebagai : '))
-            ######################## INPUT 1 UNTUK MASUK SEBAGAI ADMIN ########################
-            if masuk == 1: 
-                ######################## INPUT PASSWORD ADMIN ########################
-                ######################## ADMIN LOGIN ########################
-                password = getpass.getpass("Masukkan password: ")        
-                if password == '12345':
-                    while True:
-                        try:
-                            fitur_admin()           
-                            admin = int(input('Silahkan pilih fitur admin : \n'))
-                            ######################## FITUR 1 ADMIN "TAMPILKAN DATA" ########################
-                            if admin == 1:
-                                list_event()
-                            ######################## FITUR 2 ADMIN "TAMBAH DATA" ########################    
-                            elif admin == 2:
-                                list_event()
-                                add_event()
-                                list_event()                
-                            ######################## FITUR 3 ADMIN "HAPUS DATA" ########################    
-                            elif admin == 3:
-                                list_event()
-                                while True:
-                                    try:
-                                        opsi_hapus()
-                                        search_hapus = int(input('Masukkan opsi hapus : '))
-                                        ######################## SUBFITUR 1 ADMIN HAPUS "HAPUS DENGAN KODE TIKET" ########################
-                                        if search_hapus == 1 :
-                                            hapus()
-                                            list_event()
-                                        ######################## SUBFITUR 2 ADMIN HAPUS "CARI KODE TIKET DENGAN KEYWORD NAMA LALU HAPUS DENGAN KODE" ########################    
-                                        elif search_hapus == 2 :
-                                            cari_nama_hapus()
-                                            list_event()
-                                        ######################## KEMBALI KE MENU SEBELUMNYA (FITUR ADMIN) ########################
-                                        elif search_hapus == 3:
-                                            break
-                                        else:
-                                            print('Pilihan hanya 1-3')
-                                    except:
-                                        print('Opsi Tidak tersedia')
-                                print('List setelah dihapus')
-                                print("\n")
-                                list_event()               
-                            ######################## FITUR 4 ADMIN "UPDATE DATA" ########################    
-                            elif admin == 4:
-                                list_event()
-                                while True:
-                                    try:    
-                                        opsi_update()
-                                        search_update = int(input('Masukkan Opsi Pencarian : '))
-                                        ######################## SUBFITUR 1 ADMIN UPDATE "UPDATE DENGAN KODE TIKET" ########################
-                                        if search_update == 1:
-                                            update()
-                                            list_event()
-                                        ######################## SUBFITUR 2 ADMIN UPDATE "CARI KODE TIKET DENGAN KEYWORD NAMA LALU UPDATE DENGAN KODE" ########################
-                                        elif search_update == 2:
-                                            cari_nama_update()
-                                        ######################## KEMBALI KE MENU SEBELUMNYA (FITUR ADMIN) ########################    
-                                        elif search_update == 3:
-                                            break
-                                        else:
-                                            print('Pilihan hanya 1-3')
-                                    except:
-                                        print('Pilihan Tidak Tersedia')
-                                list_event()
-                            ######################## FITUR 5 ADMIN "TAMPILKAN DATA PEMBELIAN" ########################    
-                            elif admin == 5:
-                                print("\n")
-                                data_pembeli()
-                                print("\n")
-                            ######################## ADMIN LOGOUT ########################    
-                            elif admin == 6:
-                                break                 
-                            else : 
-                                print('Pilhan fitur admin yang tersedia hanya 1-4')
-                        except:
-                            print('Pilihan tidak tersedia')
-                else :
-                    print('Password Salah!')      
-            ######################## INPUT 2 UNTUK MASUK SEBAGAI USER ########################                
-            elif masuk == 2:
+try:
+    while True:
+        ######################## INPUT UNTUK MASUK MENU UTAMA ########################
+        user_in()
+        masuk = int(input('Masuk sebagai : '))
+        ######################## INPUT 1 UNTUK MASUK SEBAGAI ADMIN ########################
+        if masuk == 1: 
+            ######################## INPUT PASSWORD ADMIN ########################
+            ######################## ADMIN LOGIN ########################
+            password = getpass.getpass("Masukkan password: ")        
+            if password == '12345':
                 while True:
                     try:
-                        fitur_user()
-                        user = int(input('Silahkan pilih fitur user : '))
-                        ######################## FITUR 1 USER "TAMPILKAN DATA" ########################
-                        if user == 1:
+                        fitur_admin()           
+                        admin = int(input('Silahkan pilih fitur admin : \n'))
+                        ######################## FITUR 1 ADMIN "TAMPILKAN DATA" ########################
+                        if admin == 1:
                             list_event()
-                        ######################## FITUR 2 USER "CARI DATA DENGAN KEYWORD NAMA" ########################    
-                        elif user == 2:
+                        ######################## FITUR 2 ADMIN "TAMBAH DATA" ########################    
+                        elif admin == 2:
                             list_event()
+                            add_event()
+                            list_event()                
+                        ######################## FITUR 3 ADMIN "HAPUS DATA" ########################    
+                        elif admin == 3:
+                            list_event()
+                            while True:
+                                try:
+                                    opsi_hapus()
+                                    search_hapus = int(input('Masukkan opsi hapus : '))
+                                    ######################## SUBFITUR 1 ADMIN HAPUS "HAPUS DENGAN KODE TIKET" ########################
+                                    if search_hapus == 1 :
+                                        hapus()
+                                        list_event()
+                                    ######################## SUBFITUR 2 ADMIN HAPUS "CARI KODE TIKET DENGAN KEYWORD NAMA LALU HAPUS DENGAN KODE" ########################    
+                                    elif search_hapus == 2 :
+                                        cari_nama_hapus()
+                                        list_event()
+                                    ######################## KEMBALI KE MENU SEBELUMNYA (FITUR ADMIN) ########################
+                                    elif search_hapus == 3:
+                                        break
+                                    else:
+                                        print('Pilihan hanya 1-3')
+                                except:
+                                    print('Opsi Tidak tersedia')
+                            print('List setelah dihapus')
                             print("\n")
-                            user_cari_tiket()
-                            print("\n")
-                        ######################## FITUR 3 USER BELI TIKET ########################    
-                        elif user == 3:
+                            list_event()               
+                        ######################## FITUR 4 ADMIN "UPDATE DATA" ########################    
+                        elif admin == 4:
                             list_event()
-                            beli_tiket()
-                        ######################## DARI MENU USER KEMBALI KE MENU MASUK ########################               
-                        elif user == 4:
-                            break                   
-                        else: 
-                            print('Pilhan fitur user yang tersedia hanya 1 -3 ')
+                            while True:
+                                try:    
+                                    opsi_update()
+                                    search_update = int(input('Masukkan Opsi Pencarian : '))
+                                    ######################## SUBFITUR 1 ADMIN UPDATE "UPDATE DENGAN KODE TIKET" ########################
+                                    if search_update == 1:
+                                        update()
+                                        list_event()
+                                    ######################## SUBFITUR 2 ADMIN UPDATE "CARI KODE TIKET DENGAN KEYWORD NAMA LALU UPDATE DENGAN KODE" ########################
+                                    elif search_update == 2:
+                                        cari_nama_update()
+                                    ######################## KEMBALI KE MENU SEBELUMNYA (FITUR ADMIN) ########################    
+                                    elif search_update == 3:
+                                        break
+                                    else:
+                                        print('Pilihan hanya 1-3')
+                                except:
+                                    print('Pilihan Tidak Tersedia')
+                            list_event()
+                        ######################## FITUR 5 ADMIN "TAMPILKAN DATA PEMBELIAN" ########################    
+                        elif admin == 5:
+                            print("\n")
+                            data_pembeli()
+                            print("\n")
+                        ######################## ADMIN LOGOUT ########################    
+                        elif admin == 6:
+                            break                 
+                        else : 
+                            print('Pilhan fitur admin yang tersedia hanya 1-4')
                     except:
-            
-                        print('Pilihan Tidak Tersedia')
-            ######################## INPUT 2 UNTUK EXIT PROGRAM ########################
-            elif masuk == 3:
-                break      
-            else:
-                print('Opsi Hanya 1-3')
-    except:
-        print('Pilihan tidak tersedia')
+                        print('Pilihan tidak tersedia')
+            else :
+                print('Password Salah!')      
+        ######################## INPUT 2 UNTUK MASUK SEBAGAI USER ########################                
+        elif masuk == 2:
+            while True:
+                try:
+                    fitur_user()
+                    user = int(input('Silahkan pilih fitur user : '))
+                    ######################## FITUR 1 USER "TAMPILKAN DATA" ########################
+                    if user == 1:
+                        list_event()
+                    ######################## FITUR 2 USER "CARI DATA DENGAN KEYWORD NAMA" ########################    
+                    elif user == 2:
+                        list_event()
+                        print("\n")
+                        user_cari_tiket()
+                        print("\n")
+                    ######################## FITUR 3 USER BELI TIKET ########################    
+                    elif user == 3:
+                        list_event()
+                        beli_tiket()
+                    ######################## DARI MENU USER KEMBALI KE MENU MASUK ########################               
+                    elif user == 4:
+                        break                   
+                    else: 
+                        print('Pilhan fitur user yang tersedia hanya 1 -3 ')
+                except:
+        
+                    print('Pilihan Tidak Tersedia')
+        ######################## INPUT 2 UNTUK EXIT PROGRAM ########################
+        elif masuk == 3:
+            break      
+        else:
+            print('Opsi Hanya 1-3')
+except:
+    print('Pilihan tidak tersedia')

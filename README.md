@@ -26,12 +26,4 @@ The application facilitates the creation, viewing, modification, and deletion of
 
 ## Installation
 
-To run the TicketBookingApp with CRUD features locally, follow these steps:
-
-1. Clone the repository:
-
-   ```bash
-   git clone https://github.com/igndeo/TiketBookingApp/tree/main
-
-   cd TicketBookingApp
-
+To run the TicketBookingApp with CRUD features locally, download the code from : https://github.com/igndeo/TiketBookingApp/tree/main

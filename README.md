@@ -26,4 +26,4 @@ The application facilitates the creation, viewing, modification, and deletion of
 
 ## Installation
 
-To run the TicketBookingApp with CRUD features locally, download the code from : https://github.com/igndeo/TiketBookingApp/tree/main
+To run the TicketBookingApp with CRUD features locally, download the code from : https://github.com/igndeo/TiketBookingApp/blob/main/Capstone_Sistem%20Pemesanan%20Tiket%20Online_Ignasius%20Deo.py
